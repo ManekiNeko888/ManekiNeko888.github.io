@@ -1,0 +1,28 @@
+<!DOCTYPE html/>
+<html>
+ <head>
+   <title>WebEdit</title>
+   <meta charset="utf-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=2, shrink-to-fit=no"> 
+   <script>
+   	function refresh(){
+   	  var editorValue=document.getElementById("editor-textarea").value;
+        var result= document.querySelector("#viewer");
+      // result.contentDocument.body.innerHTML=document.getElementById("editor-textarea").value;
+        result.srcdoc=editorValue;
+        // alert();
+ };
+   </script>
+</head>
+ 
+  <body>
+     <h1>Editor <a href="#">JP</a><h1>
+     	<div class="main">
+     
+           <iframe id="viewer" width="350" height="100" ></iframe>
+           <textarea id="editor-textarea" placeholder="suka" cols="30" rows="10"> </textarea>
+          <button onclick="refresh()">Запустить</button>
+          </div>
+ </body>  
+ 
+</html>
